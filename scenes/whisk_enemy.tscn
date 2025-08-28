@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://h1dwtrkc226x"]
+
+[ext_resource type="Texture2D" uid="uid://bv1sdr318phbk" path="res://assets/sprites/WhiskDesign3.png" id="1_32ad0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v4pgm"]
+load_path = "res://.godot/imported/New Piskel-1.png (1) (2).png-bb435ab6284cd21eee0a28e596a48a3b.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng735"]
+atlas = SubResource("CompressedTexture2D_v4pgm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8svap"]
+atlas = SubResource("CompressedTexture2D_v4pgm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cv1s"]
+atlas = SubResource("CompressedTexture2D_v4pgm")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq704"]
+atlas = SubResource("CompressedTexture2D_v4pgm")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4huyf"]
+atlas = ExtResource("1_32ad0")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_682k2"]
+atlas = ExtResource("1_32ad0")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7nq0t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng735")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8svap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cv1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq704")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4huyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_682k2")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 5.0
+}]
+
+[node name="whiskEnemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7nq0t")
+animation = &"roll"
+autoplay = "idle"
+frame_progress = 0.0304569
