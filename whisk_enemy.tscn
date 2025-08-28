@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://becapb24xwtu1"]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/WhiskDesign3.png" id="1_x4far"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdmcj"]
+atlas = ExtResource("1_x4far")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k82ja"]
+atlas = ExtResource("1_x4far")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqnyn"]
+atlas = ExtResource("1_x4far")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk2yk"]
+atlas = ExtResource("1_x4far")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4huyf"]
+atlas = ExtResource("1_x4far")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_682k2"]
+atlas = ExtResource("1_x4far")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7nq0t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdmcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k82ja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqnyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk2yk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4huyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_682k2")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 5.0
+}]
+
+[node name="whiskEnemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7nq0t")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.770417
